@@ -1,2 +1,2 @@
-# aa360.github.io
+# aa360
 Quick guide for Automation Anywhere 360 Actions
