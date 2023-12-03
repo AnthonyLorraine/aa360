@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Offside
+- Font Author: Copyright 2012 The Offside Project Authors (https://github.com/etunni/offside) with Reserved Font Name 'Offside'
+- Font Source: http://fonts.gstatic.com/s/offside/v24/HI_KiYMWKa9QrAykQ5HiRp-dhpQ.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
