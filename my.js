@@ -27,6 +27,7 @@
 
 const content = document.getElementById('content')
 const menuItems = document.querySelectorAll('a.nav-link')
+const guideNavItems = document.querySelectorAll('#guides-nav a')
 
 const clearNavActiveStatus = () => {
     for (let i = 0; i < menuItems.length; i++) {
@@ -63,7 +64,7 @@ const changeContentEventHandler = (event) => {
     changeContent(htmlFileName)
 }
 const changeContent = (htmlFileName) => {
-        fetch(htmlFileName + '.html')
+    fetch(htmlFileName + '.html')
         .then(response => response.text())
         .then(htmlContent => {
             // Set the HTML content of the div
@@ -82,4 +83,41 @@ if (currentPage !== null) {
     changeContent(currentPage)
 } else {
     changeContent('home')
+}
+
+const clearGuideNavActiveStatus = () => {
+    for (let i = 0; i < guideNavItems.length; i++) {
+        guideNavItems[i].classList.remove('active')
+    }
+}
+
+
+const changeGuideEventHandler = (element) => {
+    clearGuideNavActiveStatus()
+    element.classList.add('active')
+    let htmlFileName = element.getAttribute('data-html')
+    setCookie('currentGuide', htmlFileName, 1)
+    renderMarkdown(htmlFileName)
+}
+const renderMarkdown = (markdownFileName) => {
+    let converter = new showdown.Converter()
+    const guidesSection = document.getElementById('guides-markdown');
+
+    let markdownPath = ".\\guides\\" + markdownFileName + ".md"
+
+    fetch(markdownPath)
+        .then(response => response.text())
+        .then(mdContent => {
+            guidesSection.innerHTML = converter.makeHtml(mdContent);
+        })
+        .catch(error => console.error('Error loading HTML File:', error));
+
+}
+
+const setCurrentGuide = () => {
+    let currentGuide = getCookie('currentGuide')
+
+    if (currentGuide !== null) {
+        renderMarkdown(currentGuide)
+    }
 }

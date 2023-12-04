@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="my.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
     <script src="my.js" defer></script>
     <script src="darkmode.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="main-nav">
     <div class="container-fluid">
         <a class="navbar-brand" href="">
             <img src="media/android-chrome-512x512.png" alt="Bootstrap" width="40" height="40">
@@ -33,6 +35,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="" data-html="datetimeformat">DateTime Formats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-html="guides">Guides</a>
                     </li>
                 </ul>
             </div>
@@ -68,15 +73,24 @@
                 </li>
             </ul>
         </div>
-
     </div>
-
 </nav>
 <main class="container mt-5" id="content">
 
 </main>
-<footer>
+<footer class="px-5 d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2023 Anthony Lorraine</p>
 
+    <a href="" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="media/android-chrome-512x512.png" alt="Bootstrap" width="40" height="40">
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end" id="footer-nav">
+        <li class="nav-item"><a href="https://www.linkedin.com/in/anthony-lorraine87/" class="nav-link px-2 text-body-secondary">LinkedIn</a></li>
+        <li class="nav-item"><a href="https://github.com/AnthonyLorraine" class="nav-link px-2 text-body-secondary">Github</a></li>
+        <li class="nav-item"><a href="https://www.automationanywhere.com/" class="nav-link px-2 text-body-secondary">Automation Anywhere</a></li>
+        <li class="nav-item"><a href="LICENSE" target="_self" class="nav-link px-2 text-body-secondary">Licence</a></li>
+    </ul>
 </footer>
 </body>
 </html>
