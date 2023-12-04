@@ -64,7 +64,9 @@ const changeContentEventHandler = (event) => {
     changeContent(htmlFileName)
 }
 const changeContent = (htmlFileName) => {
-    fetch(htmlFileName + '.html')
+    let htmlFile = htmlFileName + '.html'
+
+    fetch(htmlFile)
         .then(response => response.text())
         .then(htmlContent => {
             // Set the HTML content of the div
